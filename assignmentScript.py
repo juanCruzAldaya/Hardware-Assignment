@@ -29,7 +29,7 @@ sheet = workbook.active
 if sheet["A2"].value != None:
     for row in sheet.iter_rows(min_row=2, min_col=1, max_row=35, max_col=1):
 
-        driver.get("https://support.accenture.com/now/nav/ui/classic/params/target/alm_hardware_list.do%3Fsysparm_query%3DGOTOasset_tagIN%26sysparm_first_row%3D1%26sysparm_view%3D%26sysparm_fixed_query%3Dinstall_status!%253D2")
+        driver.get("################################################")
         WebDriverWait(driver, timeOut).until(EC.title_is("Hardware | ServiceNow"))
         shadow_section = driver.execute_script('''return document.querySelector("body > macroponent-f51912f4c700201072b211d4d8c26010").shadowRoot.querySelector("div > sn-canvas-appshell-root > sn-canvas-appshell-layout")''')
         iframe = shadow_section.find_element(By.TAG_NAME, 'iframe')
